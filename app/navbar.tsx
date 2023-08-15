@@ -2,8 +2,8 @@ import Link from 'next/link';
 
 export default function Navbar() {
     return (
-        <nav className="flex items-center justify-center h-16 p-5 bg-blanco backdrop-blur fixed w-screen">
-            <ul className="flex gap-10 absolute right-20">
+        <nav className="flex items-center justify-center">
+            <ul className="flex gap-10 right-20">
                 <li>
                     <Link className="" href="/">
                         Inicio

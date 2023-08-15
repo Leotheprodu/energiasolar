@@ -1,15 +1,37 @@
+import { BannerSlider } from '@/components/sliders/BannerSlider';
 import Image from 'next/image';
+async function getData(url: string) {
+    const baseUrl = process.env.NEXT_PUBLIC_API_URL;
 
-export default function Home() {
+    const res = await fetch(`${baseUrl}${url}`);
+    // The return value is *not* serialized
+    // You can return Date, Map, Set, etc.
+
+    if (!res.ok) {
+        // This will activate the closest `error.js` Error Boundary
+        throw new Error('Failed to fetch data');
+    }
+
+    return res.json();
+}
+export default async function Home() {
+    const datos = await getData('sliders?populate=*');
+    const { data } = datos;
     return (
-        <main className="pt-16">
+        <main>
             <div className=" flex flex-col justify-center items-center gap-2 ">
-                <img
-                    src="https://storage.googleapis.com/bucket-energiasolar/large_seslab_paneles_1f27e6fcba/large_seslab_paneles_1f27e6fcba.jpg"
+                <BannerSlider datos={data} />
+                {/* <Image
+                    src="https://storage.googleapis.com/bucket-energiasolar/IMG_0647_22f98bd0d9/IMG_0647_22f98bd0d9.jpg"
                     alt="contruccion"
-                    className="object-cover w-96 h-96 rounded-full shadow-lg"
-                />
-                <h1 className="text-xl">
+                    width={0}
+                    height={0}
+                    sizes="100%"
+                    className="object-cover"
+                    style={{ width: '100%', height: '40rem' }} // optional
+                ></Image> */}
+
+                <h1 className="text-xl text-secundario">
                     Lo sentimos, actualmente este sitio esta en construcción
                 </h1>
                 <h3>

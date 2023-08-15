@@ -13,6 +13,9 @@ module.exports = {
         colors: {
             blanco: '#ffffff',
             azul: '#7e5bef',
+            primario: '#f39116',
+            secundario: '#98c342',
+            terciario: '#0a72b7',
         },
     },
     darkMode: 'class',
