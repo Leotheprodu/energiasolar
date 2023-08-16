@@ -24,7 +24,7 @@ export default function RootLayout({
                 <Providers>
                     <div className="bg-blanco">
                         <div className="flex flex-col">
-                            <div className="flex items-center justify-between mx-[10rem] my-3">
+                            <div className="md:flex items-center md:justify-between mx-auto md:mx-[10rem] my-3">
                                 <Link href={'/'} className="">
                                     <Image
                                         src={
@@ -36,7 +36,7 @@ export default function RootLayout({
                                         className=""
                                     ></Image>
                                 </Link>
-                                <div>
+                                <div className="hidden md:flex md:flex-col">
                                     <div className="flex gap-2">
                                         <IconPhoneFilled className="text-primario" />{' '}
                                         <p className="">3194 948 565</p>

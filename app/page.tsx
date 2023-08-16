@@ -7,7 +7,7 @@ export default async function Home() {
     return (
         <main>
             {data ? <BannerSlider datos={data} /> : 'cargando'}
-            <div className=" flex flex-col justify-center items-center gap-2">
+            <div className=" flex flex-col justify-center items-center gap-2 px-6">
                 <h1 className="text-xl text-secundario">
                     Tu Socio en Energía Renovable en Colombia
                 </h1>

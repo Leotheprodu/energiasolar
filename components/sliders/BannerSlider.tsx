@@ -48,7 +48,7 @@ export function BannerSlider({ datos }: Props) {
                     return (
                         <div
                             key={title}
-                            className="h-[60vh] w-full flex justify-center items-center"
+                            className="h-[60vh] w-full flex justify-center items-center px-2"
                             style={{
                                 background: `url(${img_link.data.attributes.formats.large.url})`,
                                 backgroundRepeat: 'no-repeat',

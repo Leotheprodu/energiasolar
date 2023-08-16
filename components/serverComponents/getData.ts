@@ -1,7 +1,7 @@
-export async function getData(url: string) {
+export async function getData(url: string, cache: boolean = true) {
     const baseUrl = process.env.NEXT_PUBLIC_API_URL;
-
-    const res = await fetch(`${baseUrl}${url}`);
+    const cacheConfig = cache ? 'force-cache' : 'no-store';
+    const res = await fetch(`${baseUrl}${url}`, { cache: cacheConfig });
     // The return value is *not* serialized
     // You can return Date, Map, Set, etc.
 

@@ -2,7 +2,7 @@ import { Link } from '@nextui-org/link';
 import NextLink from 'next/link';
 export default function Navbar() {
     return (
-        <nav className="flex items-center justify-center bg-terciario h-12 ">
+        <nav className="flex items-center justify-center bg-terciario h-12">
             <ul className="flex gap-10 right-20">
                 <li>
                     <Link

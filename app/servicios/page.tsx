@@ -2,13 +2,12 @@ import { Image } from '@nextui-org/image';
 import { getData } from '@/components/serverComponents/getData';
 import NexImage from 'next/image';
 export default async function Servicios() {
-    const datos = await getData('servicios?populate=*');
+    const datos = await getData('servicios?populate=*', false);
     const { data } = datos;
-    console.log(data);
     return (
         <main>
-            <div className="mx-[20rem] mt-10">
-                <div className=" flex items-center justify-center  relative">
+            <div className=" mx-6 xl:mx-[20rem] mt-10">
+                <div className=" hidden sm:flex items-center justify-center  relative">
                     <h1 className="absolute z-10 text-blanco text-center uppercase text-6xl font-bold">
                         {' '}
                         Nuestros Servicios
@@ -30,7 +29,7 @@ export default async function Servicios() {
                 </h2>
 
                 <div>
-                    <ul className="mt-10 flex flex-nowrap gap-5">
+                    <ul className="mt-10 flex flex-col md:flex-row md:flex-nowrap gap-5">
                         {data.map(
                             ({
                                 attributes: { nombre },
