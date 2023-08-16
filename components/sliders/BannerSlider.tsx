@@ -1,7 +1,8 @@
 'use client';
+import { Link } from '@nextui-org/link';
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
-
+import { Button } from '@nextui-org/react';
 interface Attributes {
     img_link: {
         data: {
@@ -35,9 +36,10 @@ export function BannerSlider({ datos }: Props) {
                 infiniteLoop
                 interval={6000}
                 showStatus={false}
-                showIndicators={false}
+                showIndicators
                 emulateTouch
-                showThumbs={false}
+                showThumbs
+                stopOnHover={false}
             >
                 {datos.map(({ attributes }) => {
                     const { img_link, link, link_title, title, description } =
@@ -46,20 +48,25 @@ export function BannerSlider({ datos }: Props) {
                     return (
                         <div
                             key={title}
-                            className="BannerSlider__div"
+                            className="h-[60vh] w-full flex justify-center items-center"
                             style={{
                                 background: `url(${img_link.data.attributes.formats.large.url})`,
-                                backgroundSize: 'cover',
-                                backgroundPosition: 'center',
                                 backgroundRepeat: 'no-repeat',
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center center',
                             }}
                         >
-                            <div className="BannerSlider__div-texto">
-                                <h2>{title}</h2>
-                                <p>{description}</p>
-                                <a target="_blank" href={link}>
+                            <div className="flex flex-col gap-4 text-blanco justify-center items-center">
+                                <h2 className="uppercase text-7xl">{title}</h2>
+                                <p className="text-2xl">{description}</p>
+                                <Button
+                                    href={link}
+                                    as={Link}
+                                    className="bg-secundario uppercase text-blanco"
+                                    size="lg"
+                                >
                                     {link_title}
-                                </a>
+                                </Button>
                             </div>
                         </div>
                     );
