@@ -24,6 +24,26 @@ export default function Navbar() {
                         Servicios
                     </Link>
                 </li>
+                <li>
+                    <Link
+                        className="text-blanco uppercase"
+                        as={NextLink}
+                        underline="hover"
+                        href="/"
+                    >
+                        Nuestra Empresa
+                    </Link>
+                </li>
+                <li>
+                    <Link
+                        className="text-blanco uppercase"
+                        as={NextLink}
+                        underline="hover"
+                        href="/"
+                    >
+                        Contacto
+                    </Link>
+                </li>
             </ul>
         </nav>
     );

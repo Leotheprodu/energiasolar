@@ -1,12 +1,11 @@
 import { getData } from '@/components/serverComponents/getData';
 import { BannerSlider } from '@/components/sliders/BannerSlider';
 
-export default async function Home() {
-    const datos = await getData('sliders?populate=*');
-    const { data } = datos;
+export default async function Empresa() {
+    /*  const datos = await getData('contacto');
+    const { data } = datos; */
     return (
         <>
-            {data ? <BannerSlider datos={data} /> : 'cargando'}
             <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52">
                 <h1 className="text-xl text-secundario">
                     Tu Socio en Energía Renovable en Colombia
