@@ -7,10 +7,17 @@ import { Link } from '@nextui-org/link';
 import NextLink from 'next/link';
 import Image from 'next/image';
 import { IconMailFilled, IconPhoneFilled } from '@tabler/icons-react';
+import {
+    EMP_DIR,
+    EMP_EMAIL_1,
+    EMP_NAME,
+    EMP_TEL_1,
+    EMP_YEAR,
+} from '@/constants';
 const inter = Inter({ subsets: ['latin'] });
 
 export const metadata: Metadata = {
-    title: 'DC Energía Solar',
+    title: EMP_NAME,
     description: 'Empresa de Suministros y proyectos solares en Colombia',
 };
 
@@ -33,20 +40,18 @@ export default function RootLayout({
                                         }
                                         width={150}
                                         height={150}
-                                        alt="Logo DC Enegia Solar"
+                                        alt={`Logo ${EMP_NAME}`}
                                         className=""
                                     ></Image>
                                 </Link>
                                 <div className="hidden md:flex md:flex-col">
                                     <div className="flex gap-2">
                                         <IconPhoneFilled className="text-primario" />{' '}
-                                        <p className="">+(57)3194 948 565</p>
+                                        <p className="">{`+(57)${EMP_TEL_1}`}</p>
                                     </div>
                                     <div className="flex gap-2">
                                         <IconMailFilled className="text-primario" />{' '}
-                                        <p className="">
-                                            info@somosmasqueenergiadcsas.com
-                                        </p>
+                                        <p className="">{EMP_EMAIL_1}</p>
                                     </div>
                                 </div>
                             </div>
@@ -59,7 +64,7 @@ export default function RootLayout({
                         <div className="grid grid-cols-2">
                             <div className="flex flex-col">
                                 <h3 className=" uppercase text-terciario mb-2">
-                                    DC ENERGIA SOLAR SAS
+                                    {EMP_NAME}
                                 </h3>
                                 <Link
                                     href={'/contacto'}
@@ -67,7 +72,7 @@ export default function RootLayout({
                                     as={NextLink}
                                     className="text-red-400"
                                 >
-                                    info@somosmasqueenergiadcsas.com
+                                    {EMP_EMAIL_1}
                                 </Link>
                                 <Link
                                     href={'/contacto'}
@@ -75,7 +80,7 @@ export default function RootLayout({
                                     as={NextLink}
                                     className="text-red-400"
                                 >
-                                    Llamanos: +(57)3194 948 565
+                                    {`Llamanos: +(57)${EMP_TEL_1}`}
                                 </Link>
                                 <Link
                                     href={'/contacto'}
@@ -83,13 +88,12 @@ export default function RootLayout({
                                     as={NextLink}
                                     className="text-red-400"
                                 >
-                                    Carrera 43 A – 15sur- 15 Edificio Xerox piso
-                                    8 Medellín- Antioquia
+                                    {EMP_DIR}
                                 </Link>
                             </div>
                             <div className="flex items-end">
-                                © 2023 DC ENERGIA SOLAR SAS. Todos los derechos
-                                reservados.
+                                {`© ${EMP_YEAR} ${EMP_NAME}. Todos los derechos
+                                reservados.`}
                             </div>
                         </div>
                     </footer>

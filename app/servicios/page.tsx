@@ -1,6 +1,7 @@
 import { Image } from '@nextui-org/image';
 import { getData } from '@/components/serverComponents/getData';
 import NexImage from 'next/image';
+import { EMP_NAME } from '@/constants';
 export default async function Servicios() {
     const datos = await getData('servicios?populate=*', false);
     const { data } = datos;
@@ -50,21 +51,21 @@ export default async function Servicios() {
             <div className="mt-[10rem] flex flex-col gap-5">
                 <p>
                     {' '}
-                    DC Energía Solar es tu socio confiable en soluciones
+                    {`${EMP_NAME} es tu socio confiable en soluciones
                     energéticas en Colombia. Nos especializamos en instalación y
                     ejecución de proyectos solares, ofreciendo servicios On
                     Grid, Off Grid y sistemas híbridos. Nuestra experiencia
                     garantiza resultados de calidad y eficiencia, respaldados
                     por un mantenimiento continuo que asegura el máximo
-                    rendimiento a lo largo del tiempo.
+                    rendimiento a lo largo del tiempo.`}
                 </p>
 
                 <p>
-                    Descubre cómo DC Energía Solar puede transformar tu empresa
+                    {`Descubre cómo ${EMP_NAME} puede transformar tu empresa
                     con soluciones solares de vanguardia. Contáctanos para una
                     consulta personalizada y comienza tu viaje hacia la
                     independencia energética y la sostenibilidad. Juntos,
-                    estamos creando un mañana más brillante y eficiente.
+                    estamos creando un mañana más brillante y eficiente.`}
                 </p>
             </div>
         </div>

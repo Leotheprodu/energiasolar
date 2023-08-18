@@ -1,5 +1,6 @@
 import { getData } from '@/components/serverComponents/getData';
 import { BannerSlider } from '@/components/sliders/BannerSlider';
+import { EMP_NAME } from '@/constants';
 
 export default async function Home() {
     const datos = await getData('sliders?populate=*');
@@ -11,7 +12,7 @@ export default async function Home() {
                 <h1 className="text-xl text-secundario">
                     Tu Socio en Energía Renovable en Colombia
                 </h1>
-                <h3>Bienvenidos a DC Energía Solar</h3>
+                <h3>{`Bienvenidos a ${EMP_NAME}`}</h3>
                 <p>
                     {' '}
                     Estamos comprometidos con la transformación sostenible y el
