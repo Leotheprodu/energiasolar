@@ -38,8 +38,8 @@ export function BannerSlider({ datos }: Props) {
                 showStatus={false}
                 showIndicators
                 emulateTouch
-                showThumbs
                 stopOnHover={false}
+                showThumbs={false}
             >
                 {datos.map(({ attributes }) => {
                     const { img_link, link, link_title, title, description } =

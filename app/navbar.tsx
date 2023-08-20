@@ -29,7 +29,7 @@ export default function Navbar() {
                         className="text-blanco uppercase"
                         as={NextLink}
                         underline="hover"
-                        href="/"
+                        href="/empresa"
                     >
                         Nuestra Empresa
                     </Link>
@@ -39,7 +39,7 @@ export default function Navbar() {
                         className="text-blanco uppercase"
                         as={NextLink}
                         underline="hover"
-                        href="/"
+                        href="/contacto"
                     >
                         Contacto
                     </Link>
