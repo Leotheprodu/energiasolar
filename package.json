@@ -4,12 +4,12 @@
     "private": true,
     "scripts": {
         "dev": "next dev",
-        "prebuild": "node prebuild.js",
         "build": "next build",
         "start": "next start",
         "lint": "next lint"
     },
     "dependencies": {
+        "@netlify/plugin-nextjs": "^4.39.0",
         "@nextui-org/react": "^2.0.9",
         "@tabler/icons-react": "^2.30.0",
         "@types/node": "20.4.5",
