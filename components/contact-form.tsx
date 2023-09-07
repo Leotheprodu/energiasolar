@@ -95,7 +95,7 @@ export function FormulariodeContacto() {
                         <div className="my-0 mx-auto">
                             <ReCAPTCHA
                                 ref={captcha}
-                                sitekey="6LdqhcAiAAAAAE8hwgEptpxIcQHsW_c2S_AfkFmw"
+                                sitekey="6LclegYoAAAAAACIU2-vbnbPlIiwxnZ81ZOwa-RU"
                                 onChange={onChange}
                             />
                         </div>

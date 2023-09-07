@@ -10,8 +10,8 @@ export default async function Contacto() {
                     referrerPolicy="no-referrer-when-downgrade"
                 ></iframe>
             </div>
-            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52">
-                <h1 className="text-xl text-terciario ">
+            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52 mt-10">
+                <h1 className="text-xl text-terciario mt-10">
                     Contáctanos para más información
                 </h1>
                 <h3>Llena el formulario</h3>
