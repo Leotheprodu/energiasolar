@@ -106,10 +106,10 @@ export function FormulariodeContacto() {
                             <Button
                                 className="mt-4"
                                 color="primary"
-                                spinner={
+                                isLoading={
                                     formStatus === '...Enviando' ? true : false
                                 }
-                                disabled={statusenviado}
+                                isDisabled={statusenviado}
                                 type="submit"
                             >
                                 Enviar

@@ -5,7 +5,7 @@ export default async function Empresa() {
     const { data } = datos; */
     return (
         <>
-            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52 mt-32 w-3/5 mx-auto">
+            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52 mt-32 p-3 w-auto md:w-3/5 mx-auto">
                 <h2 className="text-3xl font-bold mb-5">¿Quienes Somos?</h2>
 
                 <p className="mb-8">
@@ -32,7 +32,7 @@ export default async function Empresa() {
             </div>
 
             <div className="flex flex-col gap-5 md:flex-row justify-center items-center p-5 bg-no-repeat bg-center bg-cover  bg-[url('https://storage.googleapis.com/bucket-energiasolar/https://storage.googleapis.com/%7Bbucket-name%7D/panel_2562239_1280_d4b7230e34/panel_2562239_1280_d4b7230e34.jpg')]">
-                <div className=" rounded-full bg-primario w-[25rem] h-[25rem] flex flex-col justify-center items-center overflow-hidden hover:scale-105 transition-transform duration-300 ease-out">
+                <div className=" md:rounded-full bg-primario md:w-[25rem] md:h-[25rem] flex flex-col justify-center items-center overflow-hidden hover:scale-105 transition-transform duration-300 ease-out">
                     <h3 className="uppercase">Misión</h3>
                     <p className="p-10 text-center">
                         Nuestro objetivo es incrementar en la región la
@@ -42,7 +42,7 @@ export default async function Empresa() {
                         necesidades de cada individuo u organización.
                     </p>
                 </div>
-                <div className="w-[25rem] h-[25rem] flex items-center justify-center bg-blanco/80 backdrop-blur-sm rounded ">
+                <div className="md:w-[25rem] md:h-[25rem] flex items-center justify-center bg-blanco/80 backdrop-blur-sm rounded p-3">
                     <Image
                         src={
                             'https://storage.googleapis.com/bucket-energiasolar/solar_1_7714a67ab6/solar_1_7714a67ab6.png'
@@ -53,7 +53,7 @@ export default async function Empresa() {
                         className="m-auto"
                     ></Image>
                 </div>
-                <div className=" rounded-full bg-secundario w-[25rem] h-[25rem] flex flex-col justify-center items-center overflow-hidden hover:scale-105 transition-transform duration-300 ease-out">
+                <div className=" md:rounded-full bg-secundario md:w-[25rem] md:h-[25rem] flex flex-col justify-center items-center overflow-hidden hover:scale-105 transition-transform duration-300 ease-out">
                     <h3 className="uppercase">Visión</h3>
                     <p className="p-10 text-center">
                         Ser líderes en Latinoamérica en la implementación de

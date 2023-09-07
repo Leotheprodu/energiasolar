@@ -8,11 +8,11 @@ export default async function Home() {
     return (
         <>
             {data ? <BannerSlider datos={data} /> : 'cargando'}
-            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52 mt-32 w-3/5 mx-auto">
-                <h1 className="text-3xl font-bold">
+            <div className=" flex flex-col justify-center items-center gap-2 px-6 mb-52 mt-32 p-3 w-auto md:w-3/5 mx-auto">
+                <h1 className="text-3xl font-bold text-center">
                     Tu Socio en Energía Renovable en Colombia
                 </h1>
-                <h3 className="text-bold text-xl ">{`Bienvenidos a ${EMP_NAME}`}</h3>
+                <h3 className="text-bold text-xl text-center">{`Bienvenidos a ${EMP_NAME}`}</h3>
                 <p className="text-center">
                     {' '}
                     Estamos comprometidos con la transformación sostenible y el
