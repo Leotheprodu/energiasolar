@@ -56,13 +56,13 @@ export function BannerSlider({ datos }: Props) {
                                 backgroundPosition: 'center center',
                             }}
                         >
-                            <div className="flex flex-col gap-4 text-blanco justify-center items-center">
+                            <div className="flex flex-col gap-4 text-blanco justify-center items-center bg-terciario/80 p-4 rounded-2xl backdrop-blur-sm shadow-md">
                                 <h2 className="uppercase text-7xl">{title}</h2>
                                 <p className="text-2xl">{description}</p>
                                 <Button
                                     href={link}
                                     as={Link}
-                                    className="bg-secundario uppercase text-blanco"
+                                    className="bg-secundario uppercase text-terciario"
                                     size="lg"
                                 >
                                     {link_title}

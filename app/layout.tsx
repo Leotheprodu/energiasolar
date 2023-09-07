@@ -6,7 +6,11 @@ import { Providers } from './providers';
 import { Link } from '@nextui-org/link';
 import NextLink from 'next/link';
 import Image from 'next/image';
-import { IconMailFilled, IconPhoneFilled } from '@tabler/icons-react';
+import {
+    IconBrandWhatsapp,
+    IconMailFilled,
+    IconPhoneFilled,
+} from '@tabler/icons-react';
 import {
     EMP_DIR,
     EMP_EMAIL_1,
@@ -59,6 +63,16 @@ export default function RootLayout({
                             <Navbar />
                         </div>
                     </header>
+                    <Link
+                        target="_blank"
+                        className="flex flex-col fixed right-8 bottom-10 z-10"
+                        href="https://wa.me/573157033937?text=Me%20gustaría%20saber%20más%20de%20ustedes,%20"
+                    >
+                        <div>
+                            <IconBrandWhatsapp size={40} />
+                        </div>
+                        <p>Chat</p>
+                    </Link>
                     <main>{children}</main>
                     <footer className="w-full bg-gris relative bottom-0 p-10 ">
                         <div className="grid grid-cols-2">
